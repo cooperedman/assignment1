@@ -3,7 +3,7 @@
 
 
 //Define my Caesar Cipher Function
-void caesarCipher(char* plainText, int key);
+ void caesarCipher(char* plainText, int key);
 
 int main(void){
 	
@@ -31,17 +31,17 @@ int main(void){
 void caesarCipher(char* plainText, int key){
 	
 	int i=0;
-	int cypherValue;
-	char cypher;
+	int cipherValue;
+	char cipher;
 	
 	while( plainText[i] != '\0' && strlen(plainText)-1 > i){
-		cypherValue = ((int)plainText[i] -97 + key) % 26 + 97;
-		cypher = (char)(cypherValue);
+		cipherValue = ((int)plainText[i] -97 + key) % 26 + 97;
+		cipher = cipherValue;
 		
-		printf("%c", cypher);
+		printf("%c", cipher);
 		i++;
 	}
-	printf("\n");
+	
 }
 
 
