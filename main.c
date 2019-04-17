@@ -19,6 +19,7 @@ int main(void){
 	/*Get the users text input and store it in plainText variable
 	fgets(plainText, sizeof(plainText), stdin);*/
 	
+	printf( "%s\n", plainText);
 	//Print the ciphered text
 	printf("The ciphered text is : ");
 	
@@ -34,8 +35,8 @@ void caesarCipher(char* plainText, int key){
 	int cipherValue;
 	char cipher;
 	
-	while( plainText[i] != '\0' && strlen(plainText)-1 > i){
-		cipherValue = ((int)plainText[i] -97 + key) % 26 + 97;
+	while( plainText[i] != '\0' && strlen(plainText)  > i){
+		cipherValue = ((int)plainText[i]   + key) % 26 + 46;
 		cipher = cipherValue;
 		
 		printf("%c", cipher);
