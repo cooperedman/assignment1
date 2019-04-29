@@ -19,7 +19,7 @@ int
 main () 
 {
   
-int x;                  // x variable used for user to input which function they want to use//
+int x;                  // x variable used for user to input which function they want to use, for encryption of rotion cipher input 1, 2 for decryption of rtn cipher, 3 for encryption of substitution cipher and 4 for decryption of substitution cipher//
   
  
  
@@ -59,22 +59,21 @@ return 0;
 
 
 
-// function to encrypt rotation cipher//
-  char
-encryptRtn ()                     // function prototype//
+// function to encrypt rotation cipher once user input the message wnated to encrypt//
+  char encryptRtn ()                     
 
  
 {
   
-char message[100], letter;      //  character array used to hold all letters of alpah
+char message[100], letter;      //  character array used to hold all letters of alpha string set to 100 to keep 101 values  ( more than enough)
   int i;// used as a incrementer
   
 int key;// used to determine shift value
   
  
-printf ("Enter a message to encrypt: ");
+printf ("Enter a message to encrypt: ");// sending user a prompt to enter a message they want to encrypt to stdout
   
-scanf ("%s", message);
+scanf ("%s", message); 
   
  
 printf ("message entered is %s\n", message);
@@ -171,7 +170,7 @@ letter = message[i];
 if (letter >= 'a' && letter <= 'z')
       {
         
-letter = letter - key;
+letter = letter - key; //  used - key as decryption is going the opposite way to the encryption cipher equation
         
  
 if (letter < 'a')
